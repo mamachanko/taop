@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: postgres:12.1
+    ports:
+    - "5432:5432"
+    volumes:
+    - .:/root
+  
+  py:
+    image: python:3.7
+    volumes:
+    - .:/root
