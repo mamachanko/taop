@@ -6,7 +6,11 @@ cd "$(dirname "$0")"
 
 echo
 echo "finding db container ..."
+echo
 DB_CONTAINER=$(docker-compose ps -q db)
+echo "found it:"
+echo 
+echo "  $DB_CONTAINER"
 
 if [ $# -eq 0 ]; then
     COMMAND=bash
@@ -15,7 +19,7 @@ else
 fi
 
 echo 
-echo running
+echo running:
 echo
 echo "  > $COMMAND"
 echo

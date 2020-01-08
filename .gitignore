@@ -3,3 +3,5 @@ book/
 .DS_Store
 .bash_history
 .cache
+.idea/
+.python_history

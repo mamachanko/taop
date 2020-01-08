@@ -10,6 +10,6 @@ services:
     - .:/root
   
   py:
-    image: python:3.7
+    build: .
     volumes:
     - .:/root
