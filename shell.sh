@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 echo
 echo "finding db container ..."
 echo
-DB_CONTAINER=$(docker-compose ps -q db)
+DB_CONTAINER="$(docker-compose ps -q db)"
 echo "found it:"
 echo 
 echo "  $DB_CONTAINER"
@@ -15,7 +15,7 @@ echo "  $DB_CONTAINER"
 if [ $# -eq 0 ]; then
     COMMAND=bash
 else
-    COMMAND=$@
+    COMMAND="$@"
 fi
 
 echo 
@@ -29,6 +29,5 @@ docker \
     --interactive \
     --tty \
     --workdir /root \
-    "$DB_CONTAINER" \
+    $DB_CONTAINER \
     $COMMAND
- 

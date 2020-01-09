@@ -7,4 +7,5 @@ cd "$(dirname "$0")"
 ./shell.sh \
     psql \
         --username postgres \
-        $@
+        --dbname postgres \
+        "$@"
